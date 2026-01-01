@@ -1,4 +1,4 @@
-name: Publish to npm
+name: Publish to npm (OIDC)
 
 on:
   push:
@@ -7,24 +7,21 @@ on:
 
 permissions:
   contents: read
-  id-token: write
+  id-token: write   # REQUIRED for OIDC
+  packages: write
 
 jobs:
-  build:
+  quality-gate:
+    uses: ./.github/workflows/reusable-build.yml
+
+  publish:
+    needs: quality-gate
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
+    permissions:
+      contents: read
+      id-token: write
 
-      - run: npm install
-      - run: npm test
-
-  publish-npm:
-    needs: build
-    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
@@ -33,9 +30,9 @@ jobs:
           node-version: 20
           registry-url: https://registry.npmjs.org/
 
-      # DO NOT use npm ci unless package-lock.json is present
-      - run: npm install
+      - name: Install dependencies
+        run: npm install
 
-      - run: npm publish --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Publish with provenance
+        run: npm publish --provenance --access public
+
