@@ -1,3 +1,6 @@
+![npm](https://img.shields.io/npm/v/your-package-name)
+![CI](https://github.com/your-org/your-repo/actions/workflows/npm-publish.yml/badge.svg)
+
 # 🌎 Regional Analytics Dashboard
 
 **Geospatial Intelligence · Data Visualization · Operational Insight**
