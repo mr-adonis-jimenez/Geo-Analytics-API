@@ -20,11 +20,11 @@ This pipeline enforces supply-chain integrity and production-grade quality gates
 ![npm](https://img.shields.io/npm/v/your-package)
 ![CI](https://github.com/you/repo/actions/workflows/npm-publish.yml/badge.svg)
 
-# 🌎 Geo-Analytics Dashboard
+# 🌎 Geo-Analytics API/Dashboard
 
 **Geospatial Intelligence · Data Visualization · Operational Insight**
 
-The **Regional Analytics Dashboard** is a data-driven analytics platform designed to transform raw geographic and regional datasets into clear, actionable intelligence. It enables organizations to analyze performance by location, identify trends, and support strategic decision-making through interactive visualizations and automated data workflows.
+The **Geo-Analytics API/Dashboard** is a data-driven analytics platform designed to transform raw geographic and regional datasets into clear, actionable intelligence. It enables organizations to analyze performance by location, identify trends, and support strategic decision-making through interactive visualizations and automated data workflows.
 
 This project reflects a traditional analytics discipline—**clean data in, meaningful insight out**—implemented with modern tooling and forward-looking design.
 
