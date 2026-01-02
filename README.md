@@ -20,7 +20,7 @@ This pipeline enforces supply-chain integrity and production-grade quality gates
 ![npm](https://img.shields.io/npm/v/your-package)
 ![CI](https://github.com/you/repo/actions/workflows/npm-publish.yml/badge.svg)
 
-# 🌎 Regional Analytics Dashboard
+# 🌎 Geo-Analytics Dashboard
 
 **Geospatial Intelligence · Data Visualization · Operational Insight**
 
