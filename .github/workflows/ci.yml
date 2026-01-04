@@ -1,5 +1,7 @@
-on:
   push:
     branches:
       - main
       - release/*
+
+- name: Claude Code Action Official
+  uses: anthropics/claude-code-action@v1
