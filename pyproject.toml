@@ -1,0 +1,67 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "geo-analytics-api"
+version = "0.1.0"
+description = "Data-driven analytics platform for geographic and regional datasets"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [
+    {name = "Adonis Jimenez", email = "mr.adonisjimenez@hotmail.com"}
+]
+keywords = ["analytics", "geospatial", "data", "visualization", "api"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering :: GIS",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+dependencies = [
+    "fastapi",
+    "uvicorn[standard]",
+    "pandas",
+    "numpy",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-cov",
+    "pytest-asyncio",
+    "black",
+    "flake8",
+    "isort",
+    "pylint",
+]
+
+[project.urls]
+Homepage = "https://github.com/mr-adonis-jimenez/Geo-Analytics-API"
+Repository = "https://github.com/mr-adonis-jimenez/Geo-Analytics-API"
+Issues = "https://github.com/mr-adonis-jimenez/Geo-Analytics-API/issues"
+
+[tool.setuptools]
+packages = ["."]  # This includes all Python files in the root
+
+[tool.black]
+line-length = 88
+target-version = ['py311']
+include = '\.pyi?$'
+
+[tool.isort]
+profile = "black"
+line_length = 88
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -q --strict-markers"
+testpaths = ["tests"]
+python_files = ["test_*.py", "*_test.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
