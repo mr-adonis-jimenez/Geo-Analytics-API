@@ -47,7 +47,7 @@ Repository = "https://github.com/mr-adonis-jimenez/Geo-Analytics-API"
 Issues = "https://github.com/mr-adonis-jimenez/Geo-Analytics-API/issues"
 
 [tool.setuptools]
-packages = ["."]  # This includes all Python files in the root
+py-modules = ["main", "routes", "analytics", "store"]
 
 [tool.black]
 line-length = 88
